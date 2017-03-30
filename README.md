@@ -7,6 +7,7 @@ What It Does:
 Replacing
  Username and Password text fields 
  Submit buttons
+Log Keys
 Once user presses login:
  Sends username and password to creator's computer
  replaces original html/javascript code so that it sends login error

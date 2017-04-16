@@ -32,5 +32,5 @@ In other words, other than changing words/letters/phrases depending on what you 
 2. Have three short answer response questions
 3. Right click the first input text box and go to inspect element
 4. Find the name of the input text field (i.e. entry.00000101).
-5. Copy the whole name and go to alert.js
+5. Copy the whole name and go to matrix.js (Assuming you have it downloaded)
 6. 

@@ -31,7 +31,12 @@ port.postMessage({ setForm: "pos" });
             $.ajax({
                 url: "https://docs.google.com/forms/d/e/1FAIpQLSeLs1OQwPjhZHo6eBrn-VMwkifyKKNUiGl0fPOfKFRC9HPgDw/viewform",
                 data: {
-                    "entry.832558679": msg.questionu, "entry.541755593": msg.questionp, "entry.425002392": msg.questionurl
+                    //Put in first input name
+                    "entry.832558679": msg.questionu, 
+                    //Put in second input name
+                    "entry.541755593": msg.questionp, 
+                    //Put in third input name
+                    "entry.425002392": msg.questionurl
                 },
                 type: "POST",
                 dataType: "xml",

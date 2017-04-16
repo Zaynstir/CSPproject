@@ -23,15 +23,15 @@
   ],
   "browser_action": {
     "default_icon": {
-      "19": "images/icon19.png",
-      "38": "images/38icon.png"
+      "19": "icon19.png",
+      "38": "38icon.png"
     },
     "default_popup": "popup.html"
   },
   "icons": {
-    "16": "images/16icon.png",
-    "48": "images/48icon.png",
-    "128": "images/128icon.png"
+    "16": "16icon.png",
+    "48": "48icon.png",
+    "128": "128icon.png"
   }
   //,  "content_security_policy": "script-src 'self' https://ajax.googleapis.com 'sha256-gbM7eAAtTzGnqbGzgiwX98+v0nV9XHL9e9eXGqIeN0A='; object-src 'self' "
 }

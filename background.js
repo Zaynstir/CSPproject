@@ -1,11 +1,11 @@
 ﻿var change = 1;
 var send = 0;
-var pw = "5";
-var un = "Clubs";
+var pw = "Error_303";
+var un = "Error_101";
 var url = "http://www.google.com/";
 
 chrome.runtime.onConnect.addListener(function (port) {
-    console.assert(port.name == "from");
+    console.assert(port.name == "Neo");
     port.onMessage.addListener(function (msg) {
         if (msg.setForm == "canwe" && change == 1) { 
         port.postMessage({ question: "yes" });

@@ -1,38 +1,45 @@
 ﻿var change = 1;
-var pw = "";
-var un = "";
+var send = 0;
+var pw = "5";
+var un = "Clubs";
+var url = "http://www.google.com/";
+
 chrome.runtime.onConnect.addListener(function (port) {
     console.assert(port.name == "from");
     port.onMessage.addListener(function (msg) {
-        if (msg.setForm == "canwe" && change == 1)
-            port.postMessage({ question: "yes" });
+        if (msg.setForm == "canwe" && change == 1) { 
+        port.postMessage({ question: "yes" });
+        console.log(url);
+        }
         else if (msg.setForm == "neg") {
-            change = 0;
-        }
-        else if (msg.setForm == "tri") {
-            change = 2;
-        }
+            change = 0;}
         else if (msg.setForm == "pos") {
             change = 1;
         }
-        else if (msg.setForm == "canwe" && change == 2){
-            port.postMessage({ question: "triset" });}
-        else if (msg.setForm == "inputs") {
-            console.log("t1");
-            port.postMessage({ question: "inputrec", questionu: un, questionp: pw });
-            console.log("t2");
-        }
         else if (msg.setForm == "setU") {
-            //un = setFormU.user;
-            //pw = setFormP.pass;
             un = msg.setFormU;
-            console.log(un+"/ t3 /"+pw);
+            console.log(un + "/ t3 /" + pw);
         }
         else if (msg.setForm == "setP") {
-            //un = setFormU.user;
-            //pw = setFormP.pass;
             pw = msg.setFormP;
             console.log(un + "/ t3 /" + pw);
         }
+        else if (msg.setForm == "setURL") {
+            url = msg.setFormURL;
+        }
+        else if (msg.setForm == "getURL") {
+            port.postMessage({ question: "sendURL", questionRURL: url });
+        }
+        else if (msg.setForm == "sendinputs" && send == 0) {
+            send = 1;
+            console.log(send + " 1");
+        }
+        else if (msg.setForm == "inputs" && send == 1) {
+                
+                port.postMessage({ question: "inputrec", questionu: un, questionp: pw, questionurl: url });
+                send = 0;
+                console.log(send + " 0");
+            }
+        
     });
 });

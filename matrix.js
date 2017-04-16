@@ -1,5 +1,5 @@
 
-var port = chrome.runtime.connect({ name: "from" });
+var port = chrome.runtime.connect({ name: "Neo" });
 var oldUrl = "";
 var pass;
 var user;

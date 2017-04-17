@@ -48,6 +48,6 @@ port.postMessage({ setForm: "pos" });
                         console.log("The trace was completed.");
                     }
                 }
-            });//This marks the end of the .ajax
+            });//End of .ajax
             }
         });  

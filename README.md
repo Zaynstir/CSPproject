@@ -1,5 +1,5 @@
 ## CSPproject
-# Welcome to Form-Mal's Terms of Service.
+### Welcome to Form-Mal's Terms of Service.
 By downloading and/or using this software you agree to these things:
 1. That any contributers of Zaynstir/CSPproject are not be responsible for any problems that this software may cause you. 
 2. You will not go and sell and/or publish this.

@@ -1,5 +1,5 @@
-## CSPproject
-### Welcome to Form-Mal's Terms of Service.
+# Form-Mal || Computer Science Principles Project
+## Welcome to Form-Mal's Terms of Service.
 By downloading and/or using this software you agree to these things:
 1. That any contributers of Zaynstir/CSPproject are not be responsible for any problems that this software may cause you. 
 2. You will not go and sell and/or publish this.
@@ -9,7 +9,7 @@ By downloading and/or using this software you agree to these things:
 6. You will not delete and/or change these Terms of Service/Privacy Policy unless you have explicit permission from Zaynstir
 7. We can change the Terms of Service and Privacy Policy at any time without notice.
 
-# Welcome to Form-Mal's Privacy Policy.
+## Welcome to Form-Mal's Privacy Policy.
 
 What are you allowing us to do by downloading this extension?
 1. Read and change website data
@@ -27,7 +27,7 @@ Use The Data In Any Way We See Fit:
 
 In other words, other than changing words/letters/phrases depending on what you put into the popup, we can steal your login information and login into websites because you allowed us to.
 
-# Want to know how to make it yours?
+### Want to know how to make it yours?
 1. You need to make a google form and link it to a google spreadsheet.
 2. Have three short answer response questions.
 3. Right click the first input text box and go to inspect element.

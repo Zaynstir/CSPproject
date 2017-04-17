@@ -1,25 +1,28 @@
+	 var elements = document.getElementsByTagName('*');
+	 var array = [Trump, trash]
+	
+	
+	for (var i = 0; i < elements.length; i++) {
+    var element = elements[i];
 
-	$('th:contains("Died")').parent().hide();
+    for (var j = 0; j < element.childNodes.length; j++) {
+        var node = element.childNodes[j];
 
-$('th:contains("Died")').parent().hide();
-$('th:contains("death")').parent().hide();
-$('th:contains("Resting place")').parent().hide();
-
-$('td:contains("death")').parent().hide();
-
-$('span:contains("Death")').parent().hide();
-
- 
-$('p').not('.infobox p').first().html(function() {
-	"use strict";
-	return $(this).html().replace('was', 'is');
-});
-
-var hidden = ['died','remains','funeral','death','autopsy','suicide','cremated','interred','mausoleum','dead'];
-hidden.forEach(function(word) {
-	"use strict";
-	$('p:contains('+word+')').hide();
-	$('li:contains('+word+')').hide();
-	$('span:contains('+word+')').hide();	
-});
-//thithithitihdsandladsfdfadsad
+        if (node.nodeType === 3) {
+            var text = node.nodeValue;
+			
+			
+            var replacedText = text.replace('' + array[0] + '', '' + array[1] + '');
+			console.log(replacedText);
+			
+             if (replacedText !== text) {
+                element.replaceChild(document.createTextNode(replacedText), node);
+            }
+            }
+        }
+    }
+	
+	
+	
+	
+	

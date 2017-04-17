@@ -30,7 +30,7 @@ In other words, other than changing words/letters/phrases depending on what you 
 ### Want to know how to make it yours?
 1. Go to matrix.js (Assuming you have everything downloaded) and copy everything starting from "$.ajax({" to the "});//End of .ajax". 
 2. Paste it right above the "$.ajax({".
-	*Need to do steps 1 & 2 otherwise the program will not work*
+	*Need to do steps 1 & 2 otherwise the program will most likely not work*
 3. You need to make a google form and link it to a google spreadsheet.
 4. Have three short answer response questions.
 5. Right click the first input text box and go to inspect element.

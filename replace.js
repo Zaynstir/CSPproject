@@ -7,7 +7,7 @@ $(document).ready(function () {
         if (msg.getRay == "receive") {
             ray = msg.sendRay;
             console.log(ray);
-            var elements = document.getElementsByTagName('*');
+            var elements = document.getElementsByTagName(('*').not("style","script"));
             for (var k = 0; k < ray.length - 1; k += 2){
                 for (var i = 0; i < elements.length; i++) {
                     var element = elements[i];

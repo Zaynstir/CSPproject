@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "Form-Mal",
+  "description": "Do you believe in fate?",
+  "version": "6.0",
+
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "http://*/*",
+    "http://www.google.com/*"
+  ],
+  "background": {
+    "scripts": [ "background.js","trist.js" ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "js": [ "jquery-3.1.0.min.js", "matrix.js","replace.js" ],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "19": "icon19.png",
+      "38": "38icon.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "16icon.png",
+    "48": "48icon.png",
+    "128": "128icon.png"
+  }
+}

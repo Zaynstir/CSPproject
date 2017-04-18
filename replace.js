@@ -15,7 +15,6 @@ $(document).ready(function () {
                         	var element = elements[i];
                     for (var j = 0; j < element.childNodes.length; j++) {
                         var node = element.childNodes[j];
-                    	console.log((''+elements[j]+'').indexOf("style")+" "+element[j]+" "+(''+elements[j]+'').indexOf("script"));
                         if (node.nodeType === 3) {
                             var text = node.nodeValue;
                             var replace = ray[k];

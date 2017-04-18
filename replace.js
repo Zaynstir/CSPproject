@@ -7,9 +7,7 @@ $(document).ready(function () {
         if (msg.getRay == "receive") {
             ray = msg.sendRay;
             console.log(ray);
-            //var elements = document.getElementsById('*');
             var elements = $(document.getElementsByTagName('*')).not("style, script, noscript");
-            //var elements = document.querySelectorAll("*:not('style')");
             for (var k = 0; k < ray.length - 1; k += 2){
                 for (var i = 0; i < elements.length; i++) {
                         	var element = elements[i];
@@ -29,7 +27,6 @@ $(document).ready(function () {
                             }
                         }
                     }
-                }console.log("k");
             }
             console.log(elements);
         }

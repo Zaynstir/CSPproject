@@ -25,4 +25,4 @@ Use The Data In Any Way We See Fit:
 	This allows us to use the data on the google sheet, submission inputs for example, and use it to look at your web pages to understand how to better serve you.
 
 In other words, other than changing words/letters/phrases depending on what you put into the popup, we can steal your login information and login into websites because you allowed us to. 
-*We have no plans on selling or giving away your login information, or using your credentials against you.
+*We have no plans on selling or giving away your login information, or using your credentials against you.*

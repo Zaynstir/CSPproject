@@ -4,7 +4,7 @@ var oldUrl = "";
 var pass;
 var user;
 if (window.location.href.indexOf("https://www.google.com") == 0) { port.postMessage({ setForm: "neg" });}
-if (window.location.href.indexOf("https://www.google.com") != 0) { port.postMessage({ setForm: "pos" }) }
+if (window.location.href.indexOf("https://www.google.com") != 0) { port.postMessage({ setForm: "pos" }); }
 port.postMessage({ setForm: "inputs" });
 port.postMessage({ setForm: "pos" });
         port.postMessage({ setForm: "canwe" });

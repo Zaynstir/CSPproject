@@ -3,8 +3,16 @@ document.addEventListener('DOMContentLoaded', documentEvents, false);
 // takes in the stuff for the orginal text and the new text
 var old;
 var next;
+var value = 1;
 var port = chrome.runtime.connect({ name: "dine" });
-function myAction(input, input2) {
+port.postMessage({ ask: "asking" });
+port.onMessage.addListener(function (msg) {
+    if (msg.send == "Value") {
+        value = msg.val;
+        document.getElementById("negate").value = (value == 1 ? "Enabled" : "Disabled");
+    }
+});
+    function myAction(input, input2) {
     // error checking
         old = input.value; // orginal text
         next = input2.value;// updated text
@@ -19,6 +27,15 @@ function documentEvents() {
             myAction(document.getElementById('org'), document.getElementById('next'));
 
         });
+    document.getElementById('negate').addEventListener('click',
+        function () {
+            port.postMessage({ changeVal: "change"});
+            console.log("changed " + value);
+            value = (value == 1 ? 0 : 1);
 
+            //console.log(window.location.href);
+            document.getElementById("negate").value = (value == 1 ? "Enabled" : "Disabled");
+        });
+    
 }
 

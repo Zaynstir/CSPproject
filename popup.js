@@ -36,6 +36,10 @@ function documentEvents() {
             //console.log(window.location.href);
             document.getElementById("negate").value = (value == 1 ? "Enabled" : "Disabled");
         });
+    document.getElementById('clear').addEventListener('click',
+        function () {
+            port.postMessage({ clear: "clear" });
+        });
     
 }
 

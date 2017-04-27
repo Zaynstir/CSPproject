@@ -26,7 +26,9 @@ chrome.runtime.onConnect.addListener(function (port) {
         }
         else if (msg.ask == "asking") {
             port.postMessage({ send: "Value", val: allow });
-
+        }
+        else if (msg.clear == "clear") {
+            array = [];
         }
     });
 });

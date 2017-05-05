@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', documentEvents, false);
 var old;
 var next;
 var value = 1;
+var preval;
 var port = chrome.runtime.connect({ name: "dine" });
 port.postMessage({ ask: "asking" });
 port.onMessage.addListener(function (msg) {
@@ -12,6 +13,12 @@ port.onMessage.addListener(function (msg) {
         document.getElementById("negate").value = (value == 1 ? "Enabled" : "Disabled");
     }
 });
+    function presetAction(askVal) {
+        preval = askVal.value;
+        port.postMessage({ setRay: "preset", setPre: preval });
+        console.log("It sends");
+        console.log(askVal);
+    }
     function myAction(input, input2) {
     // error checking
         old = input.value; // orginal text
@@ -24,12 +31,13 @@ port.onMessage.addListener(function (msg) {
 function documentEvents() {
     document.getElementById('button').addEventListener('click',
         function () {
+            console.log("replaceform");
             myAction(document.getElementById('org'), document.getElementById('next'));
 
         });
     document.getElementById('negate').addEventListener('click',
         function () {
-            port.postMessage({ changeVal: "change"});
+            port.postMessage({ changeVal: "change" });
             console.log("changed " + value);
             value = (value == 1 ? 0 : 1);
 
@@ -40,6 +48,31 @@ function documentEvents() {
         function () {
             port.postMessage({ clear: "clear" });
         });
-    
+    document.getElementById("presetButton").addEventListener('click',
+        function () {
+            console.log("preset");
+            presetAction(document.getElementById('preset'));
+        });
+    document.getElementById("preWord").addEventListener('click',
+        function () {
+            console.log("addingpop");
+            var a = document.getElementById('presetWord').value;
+            var b = document.getElementById('presetList').value;
+            port.postMessage({ addRay: "add", addWord: a, addList: b });
+        });
+    document.getElementById("debug").addEventListener('click',
+        function(){
+            port.postMessage({ debug: "asking" });
+        });
+    document.getElementById("refresh").addEventListener('click',
+        function () {
+            console.log("refreshing");
+            port = chrome.runtime.connect({ name: "wine" });
+            console.log(port);
+            port.postMessage({ test: "testing" });
+            port = chrome.runtime.connect({ name: "dine" });
+            console.log(port);
+            console.log("refreshed");
+        });
 }
 

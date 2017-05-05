@@ -11,11 +11,18 @@
 <body>
 
     <form>
+        Preset Arrays
+        <input type="text" id="preset" name="preset" placeholder="Input Preset Word" />
+        <input type="submit" id="presetButton" value="Set Preset" /><br />
+        <input type="text" id="presetWord" placeholder="Call Word" /><input type="text" id="presetList" placeholder='a,asdf,now,meow' />
+        <input type="submit" id="preWord" value="Add List" /><br />
         Replace all instances of
         <input type="text" id="org" name="org" placeholder="Input Letter/Word/Phrase"> With
         <input type="text" id="next" name="next" placeholder="Input Letter/Word/Phrase"><br>
         <input type="submit" id="button" value="Replace"><input type="button" id="negate" value="Enab" /> <!--onsubmit="return false">-->
         <input type="submit" id="clear" value="Clear List" />
+        <input type="submit" id="debug" value="debug" />
+        <input type="submit" id="refresh" value="Refresh Page" />
     </form>
 
 
